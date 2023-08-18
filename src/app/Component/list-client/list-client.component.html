@@ -1,1 +1,25 @@
-<p>list-client works!</p>
+<div class="container">
+  <h1>Lista de Registros</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Institución Superior</th>
+        <th>Dirección de la Institución</th>
+        <th>Número de Alumnos</th>
+        <th>Hora de Inicio</th>
+        <th>Valor del Servicio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let registro of registros">
+        <td>{{ registro.id }}</td>
+        <td>{{ registro.institucionSuperior }}</td>
+        <td>{{ registro.direccionInstitucion }}</td>
+        <td>{{ registro.numeroAlumnos }}</td>
+        <td>{{ registro.horaInicio }}</td>
+        <td>{{ registro.valorServicio }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

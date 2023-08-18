@@ -1,28 +1,31 @@
 <div class="container">
   <div class="col">
-    <h1 class="centered"></h1>
+    <h1 class="centered">Registrar Cliente</h1>
   </div>
   <hr />
 
-  <form class="row" (submit)="createRegister()">
+  <form class="form-group" (submit)="createRegister()">
     <div class="form-group col-md-3">
       <label for="higherInstitution">Institución Educativa:</label>
-      <input type="text" id="higherInstitution" name="higherInstitution" class="form-control" [(ngModel)]="registerData.HigherInstitution" required>
+      <input type="text" id="higherInstitution" name="higherInstitution"
+      class="form-control" [(ngModel)]="registerData.HigherInstitution"
+        formControlName="higherInstitution"
+      required>
     </div>
     <div class="form-group col-md-3">
       <label for="institutionAddress">Dirección de la Institución:</label>
-      <input type="text" id="institutionAddress" name="institutionAddress" class="form-control" [(ngModel)]="registerData.InstitutionAddress" required>
+      <input type="text" id="institutionAddress" name="institutionAddress" class="form-control" [(ngModel)]="registerData.InstitutionAddress"     formControlName="institutionAddress" required>
     </div>
     <div class="form-group col-md-2">
       <label for="numberStudents">Número de Estudiantes:</label>
-      <input type="number" id="numberStudents" name="numberStudents" class="form-control" [(ngModel)]="registerData.NumberStudents" required>
+      <input type="number" id="numberStudents" name="numberStudents" class="form-control" [(ngModel)]="registerData.NumberStudents"   formControlName="NumberStudents"  required>
     </div>
     <div class="form-group col-md-2">
       <label for="startTime">Fecha de Inicio:</label>
       <input type="date" id="startTime" name="startTime" class="form-control" [(ngModel)]="registerData.StartTime" required>
     </div>
     <div class="form-group col-md-2">
-      <label for="serviceCapGown">Servicio Cap and Gown:</label>
+      <label for="serviceCapGown">Servicio de Toga y Birrete:</label>
       <input type="checkbox" id="serviceCapGown" name="serviceCapGown" class="form-check-input" [(ngModel)]="registerData.ServiceCapGown">
     </div>
     <div class="form-group col-md-12">

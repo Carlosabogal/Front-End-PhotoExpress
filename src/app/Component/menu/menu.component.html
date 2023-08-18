@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
+<div class="gradient">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand">
-      <img src="assets/PhotoExpress.ico" class="d-inline-block align-top" alt="">
+    <a class="navbar-brand" href="#">
+      <img src="assets/imageIco.png" class="ico" alt="">
     </a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -22,6 +25,17 @@
       </ul>
     </div>
   </nav>
+
+  <section *ngIf="showImages">
+    <img src="assets/foto1.jpg" alt="">
+    <img src="assets/foto2.jpg" alt="">
+    <img src="assets/pexy-2881370.png" alt="">
+    <img src="assets/foto3.jpg" alt="">
+    <img src="assets/foto4.jpg" alt="">
+
+  </section>
+
   <router-outlet></router-outlet>
+</div>
 </body>
 </html>
