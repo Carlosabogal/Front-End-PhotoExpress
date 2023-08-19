@@ -18,7 +18,7 @@ import { RegisterClientComponent } from './Component/register-client/register-cl
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule
   ],
   providers: [],
