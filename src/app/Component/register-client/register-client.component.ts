@@ -42,4 +42,11 @@ export class RegisterClientComponent implements OnInit {
     this.registerForm.reset();
   }
 
+  showModal(){
+    Swal.fire(
+      '¡Felicidades!',
+      'Su evento fue agendado con éxito.',
+      'success'
+    )
+  }
 }

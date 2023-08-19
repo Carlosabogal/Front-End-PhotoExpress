@@ -36,7 +36,7 @@
         <input type="checkbox" id="serviceCapGown" name="serviceCapGown" class="form-check-input" formControlName="serviceCapGown">
       </div>
       <div class="form-group col-md-12 text-center">
-        <button type="submit" class="btn btn-primary" [disabled]="!registerForm.valid">Registrar</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!registerForm.valid" (click)="showModal()">Registrar</button>
       </div>
     </form>
 
@@ -44,25 +44,5 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const form = document.querySelector('.form-group');
-
-      form.addEventListener('submit', async (event) => {
-        event.preventDefault();
-
-        // Simulate form submission or perform actual actions here
-        // In this example, we simulate a 2-second delay
-        await new Promise(resolve => setTimeout(resolve, 2000));
-
-        Swal.fire({
-          title: '¡Registro Exitoso!',
-          text: 'El formulario se ha enviado correctamente.',
-          icon: 'success',
-          confirmButtonText: 'OK'
-        });
-      });
-    });
-  </script>
 </body>
 </html>
